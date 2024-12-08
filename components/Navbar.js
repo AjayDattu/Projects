@@ -2,7 +2,6 @@
 import React, { useState, useMemo } from 'react';
 import { Tabs } from 'antd';
 
-// Dummy content for tabs (you can replace this with your actual content)
 const tabContent = {
   1: 'Content for Home',
   2: 'Content for About',
@@ -24,7 +23,7 @@ const Navbar = () => {
 
   const tabs = useMemo(() => [
     'Art de la table', 'Mobilier', 'Nappage', 'Matériel de salle', 'Cuisine',
-    'Barbecue', 'Tente', 'Chauffage', 'Podium - Piste de danse', 'Son et lumière', 'Packs','Consommables'
+    'Barbecue', 'Tente', 'Chauffage', 'Podium - Piste de danse', 'Son et lumière', 'Packs', 'Consommables'
   ], []);
 
   const handleTabChange = (key) => {
@@ -32,7 +31,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="container mx-auto w-full font-sans">
+    <div className="container w-full font-sans">
       <Tabs
         defaultActiveKey="1"
         activeKey={activeTab}
@@ -43,15 +42,20 @@ const Navbar = () => {
         tabBarStyle={{
           borderBottom: '2px solid #e8e8e8',
         }}
-        tabBarGutter={30} 
+        tabBarGutter={30}
       >
         {tabs.map((tab, index) => (
           <TabPane
-            tab={tab}
+            tab={
+              <span
+                className={`text-[19px] ${activeTab === (index + 1).toString() ? 'text-[#0093D0]' : 'text-gray-500'}`}
+              >
+                {tab}
+              </span>
+            }
             key={index + 1}
-            className={`text-lg ${activeTab === (index + 1).toString() ? 'text-blue-600' : 'text-gray-600'}`}
+            className={`text-xl ${activeTab === (index + 1).toString() ? 'text-black' : 'text-gray-600'}`}
           >
-            <div>{tabContent[index + 1]}</div>
           </TabPane>
         ))}
       </Tabs>

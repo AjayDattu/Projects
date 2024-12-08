@@ -9,6 +9,7 @@ module.exports = {
     extend: {
        fontFamily: {
         playfair: ['Playfair Display', 'serif'],
+        cabinet: ['Cabinet Grotesk', 'sans-serif'],
       },
       colors: {
         background: "var(--background)",

@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchLogo from '../Logo/SearchLogo';
+import SearchLogo from './Logo/SearchLogo';
 
 const SearchBar = () => {
   return (
@@ -9,16 +9,13 @@ const SearchBar = () => {
         method="GET"
         className="flex items-center rounded-sm shadow-sm bg-[#F9FAFB] w-3/4 h-10 px-1 md:px-4"
       >
-        {/* Input Field */}
         <input
           type="text"
           name="q"
           placeholder="Rechercher un produit"
           aria-label="Search box"
-          className="flex-grow bg-transparent outline-none text-gray-800 text-[7px] md:text-base "
+          className="flex-grow bg-transparent outline-none text-gray-800 text-[10px] md:text-base "
         />
-
-        {/* Search Button */}
         <button
           type="submit"
           aria-label="Search"

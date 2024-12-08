@@ -1,9 +1,16 @@
-"use client"
+"use client";
 import React, { useState, useMemo } from 'react';
 import { Tabs } from 'antd';
+import dynamic from 'next/dynamic';
+
+// Dynamically import the Art component
+const Art = dynamic(() => import('../pages/Art'), {
+  ssr: false,
+  loading: () => <div>Loading Art Component...</div>,
+});
 
 const tabContent = {
-  1: 'Content for Home',
+  1: <Art />, 
   2: 'Content for About',
   3: 'Content for Services',
   4: 'Content for Projects',
@@ -18,7 +25,7 @@ const tabContent = {
 
 const { TabPane } = Tabs;
 
-const Navbar = () => {
+const MainTabs = () => {
   const [activeTab, setActiveTab] = useState('1');
 
   const tabs = useMemo(() => [
@@ -54,8 +61,9 @@ const Navbar = () => {
               </span>
             }
             key={index + 1}
-            className={`text-xl ${activeTab === (index + 1).toString() ? 'text-black' : 'text-gray-600'}`}
+          
           >
+            {tabContent[index + 1]}
           </TabPane>
         ))}
       </Tabs>
@@ -63,4 +71,4 @@ const Navbar = () => {
   );
 };
 
-export default React.memo(Navbar);
+export default React.memo(MainTabs);

@@ -5,12 +5,12 @@ import dynamic from 'next/dynamic';
 
 // Dynamically import the Art component
 const Art = dynamic(() => import('../pages/Art'), {
-  ssr: false,
-  loading: () => <div>Loading Art Component...</div>,
+  ssr: false, // Disable Server-Side Rendering for dynamic components
+  loading: () => <div>Loading Art Component...</div>, // Optional loading indicator
 });
 
 const tabContent = {
-  1: <Art />, 
+  1: <Art />, // Display Art component in the first tab
   2: 'Content for About',
   3: 'Content for Services',
   4: 'Content for Projects',
@@ -63,7 +63,7 @@ const MainTabs = () => {
             key={index + 1}
           
           >
-            {tabContent[index + 1]}
+            {tabContent[index + 1]} {/* Renders tab content dynamically */}
           </TabPane>
         ))}
       </Tabs>

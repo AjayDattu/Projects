@@ -40,7 +40,6 @@ function LandingPage() {
       <div className="flex flex-row w-[761px] h-[652px] bg-[#F8F6F4]">
       <div className="flex flex-start gap-10">
         <div>
-          {/* Display images if available */}
           {product.images?.length > 0 ? (
             product.images.map((item) => (
               <div

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^15.0.4",
     "antd": "^5.22.3",
     "next": "15.0.4",
     "react": "^19.0.0",

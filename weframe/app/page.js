@@ -1,11 +1,11 @@
-import Logo from "@/components/Logo/Logo";
-import Navbars from "@/components/Navbars";
-import Image from "next/image";
+"use client"
+import dynamic from 'next/dynamic';
+const Navbars = dynamic(() => import('@/components/Navbars'), { ssr: false });
 
 export default function Home() {
   return (
-    <div >
-      <Navbars/>
+    <div>
+      <Navbars />
     </div>
   );
 }

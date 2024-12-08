@@ -1,61 +1,5 @@
-'use client';
-import React, { useMemo } from 'react';
-import dynamic from 'next/dynamic';
-import { Dropdown } from 'antd';
 
-import SearchBar from './sub-components/SearchBar';
-import Navbar from './Navbar';
-
-// Dynamic imports for non-critical icons
-const Bulb = dynamic(() => import('./Logo/Bulb'));
-const Cart = dynamic(() => import('./Logo/Cart'));
-const Profile = dynamic(() => import('./Logo/Profile'));
-
-function Navbars() {
-  // Memoized menu items to prevent re-creation on each render
-  const menuItems = useMemo(
-    () => [
-      {
-        key: 'bulb',
-        label: (
-          <div className="flex items-center">
-            <Bulb />
-          </div>
-        ),
-      },
-      {
-        key: 'love',
-        label: (
-          <div className="flex items-center">
-            <div className='flex flex-row gap-2 items-center align-middle w-40'>
-        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M8.99428 2.27985C7.32816 0.332 4.54978 -0.191965 2.46224 1.59168C0.374693 3.37532 0.0807963 6.35748 1.72015 8.467C3.08317 10.2209 7.20813 13.9201 8.56007 15.1174C8.71133 15.2513 8.78695 15.3183 8.87517 15.3446C8.95216 15.3676 9.03641 15.3676 9.1134 15.3446C9.20161 15.3183 9.27724 15.2513 9.42849 15.1174C10.7804 13.9201 14.9054 10.2209 16.2684 8.467C17.9078 6.35748 17.6498 3.35656 15.5263 1.59168C13.4029 -0.173202 10.6604 0.332 8.99428 2.27985Z" stroke="#8F9BA0" strokeLinecap="round" strokeLinejoin="round"/>
-</svg>
-Mes favoris
-        <div className='rounded-lg bg-[#CAD2D566] h-6 w-10 text-center text-[15px]'>24</div>
-    </div>
-          </div>
-        ),
-      },
-      {
-        key: 'cart',
-        label: (
-          <div className="flex items-center">
-            <Cart />
-          </div>
-        ),
-      },
-    ],
-    []
-  );
-
-  return (
-    <div className='flex flex-col w-full'>
-    <nav className="px-2 flex flex-row p-2 gap-1 md:gap-8 items-center w-screen">
-      {/* Logo and Search Bar */}
-      <div className="w-15 h-10 md:w-2/12 md:h-28">
-<svg  width="100%"
-        height="100%" viewBox="0 0 134 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="134" height="65" viewBox="0 0 134 65" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M49.8252 32.6276L49.6753 32.7869C48.3229 34.2298 46.9612 35.6728 45.6088 37.122L41.0895 32.8369C38.8314 30.7006 36.5733 28.5674 34.3183 26.4311C35.7425 24.9538 37.1667 23.4734 38.594 21.9961C38.9001 22.2897 39.3936 22.7644 40.0089 23.3485C40.4648 23.7826 40.8053 24.1043 40.9333 24.223C42.4169 25.6222 43.9004 27.0276 45.3808 28.4269C46.8644 29.8292 48.3417 31.2284 49.8252 32.6276Z" fill="#231F20"/>
 <path d="M70.8853 10.4213L70.8603 10.4494L49.8252 32.6276L49.6784 32.7868L45.5932 37.0969L41.1551 32.8868L45.3808 28.4299L62.3088 10.5806L66.3003 6.36731L70.8353 10.4244L70.8853 10.4213Z" fill="#231F20"/>
 <path d="M71.8722 32.2247L71.7222 32.384C70.3699 33.8269 69.0081 35.2699 67.6558 36.7191L60.4286 29.8667L64.6575 25.4098C65.5819 26.2843 66.5064 27.1526 67.4247 28.0271C68.9113 29.4263 70.3886 30.8255 71.8722 32.2247Z" fill="#5CD2DD"/>
@@ -77,36 +21,3 @@ Mes favoris
 </svg>
 
 
-</div>
-      <SearchBar />
-
-      {/* Full Navbar for large screens and above */}
-      <div className="hidden lg:flex gap-3 items-center">
-        <Bulb />
-        <div className='flex flex-row gap-2 items-center align-middle w-40'>
-        <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fillRule="evenodd" clipRule="evenodd" d="M8.99428 2.27985C7.32816 0.332 4.54978 -0.191965 2.46224 1.59168C0.374693 3.37532 0.0807963 6.35748 1.72015 8.467C3.08317 10.2209 7.20813 13.9201 8.56007 15.1174C8.71133 15.2513 8.78695 15.3183 8.87517 15.3446C8.95216 15.3676 9.03641 15.3676 9.1134 15.3446C9.20161 15.3183 9.27724 15.2513 9.42849 15.1174C10.7804 13.9201 14.9054 10.2209 16.2684 8.467C17.9078 6.35748 17.6498 3.35656 15.5263 1.59168C13.4029 -0.173202 10.6604 0.332 8.99428 2.27985Z" stroke="#8F9BA0" strokeLinecap="round" strokeLinejoin="round"/>
-</svg>
-Mes favoris
-        <div className='rounded-lg bg-[#CAD2D566] h-6 w-10 text-center text-[15px]'>24</div>
-    </div>
-        <Cart />
-        <Profile />
-      </div>
-
-      {/* Dropdown Navbar for smaller screens (md and below) */}
-      <div className="lg:hidden">
-        <Dropdown menu={{ items: menuItems }} trigger={['click']} placement="bottomRight" overlayClassName="dropdown-overlay">
-          <div className="cursor-pointer">
-            <Profile />
-          </div>
-        </Dropdown>
-      </div>
-
-    </nav>
-   <Navbar/>
-    </div>
-  );
-}
-
-export default Navbars;

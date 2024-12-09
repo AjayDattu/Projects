@@ -30,7 +30,7 @@ function Navbars() {
   ];
 
   return (
-    <nav className="px-2 flex flex-row p-2 gap-1 md:gap-8 items-center w-screen sticky top-0 z-50 backdrop-blur-lg pr-5">
+    <nav className="px-2 flex flex-row p-2 gap-1 md:gap-8 items-center w-full sticky top-0 z-50 backdrop-blur-lg pr-5">
       <div className="w-15 h-10 md:w-2/12 md:h-28">
         <Logo />
       </div>
@@ -50,5 +50,4 @@ function Navbars() {
     </nav>
   );
 }
-
 export default Navbars;

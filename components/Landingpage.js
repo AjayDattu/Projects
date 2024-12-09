@@ -28,7 +28,7 @@ function LandingPage() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-7 w-screen">
       <nav aria-label="Breadcrumb" className="mb-4">
         <ol className="flex gap-1">
           <li>
@@ -123,12 +123,12 @@ function LandingPage() {
 
         </div>
       </div>
-      <div className="w-screen flex flex-col md:flex-row gap-4 pr-4 h-20">
-        <div className=" flex flex-col w-full gap-3 h-full">
-          <div className="text-xl font-cabinet text-[#111928] font-light">Description produit</div>
-          <div>
+      <div className="w-screen flex flex-col md:flex-row gap-4 pr-4 h-30">
+        <div className=" flex flex-col w-full gap-2 h-full">
+          <div className="text-[20px] font-Regular text-[#111928] font-light">Description produit</div>
+          <div className="text-[14px] h-full text-[#9C9C9C]">
           Festi vous propose à la location un/une &quot;Jewel – grand couteau/10pc&quot; 
-          pour votre évenement et ce dès 0,35 € / pièce (HTVA). Que ce soit pour votre mariage, 
+          pour votre évenement et ce dès 0,35 € / pièce (HTVA). Que ce soit pour votre mariage,
           une fête d&apos;anniversaire ou du personnel, ce produit a fait l&apos;objet d&apos;une 
           sélection rigoureuse par notre équipe. Il est en location chez nous sous la référence 
           &quot;VAJGC&quot;. Nous sommes à votre disposition pour que les événements de nos clients, 
@@ -136,9 +136,9 @@ function LandingPage() {
           d&apos;autre produit à louer de ce type dans la catégorie &quot;Art de la Table&quot;.
         </div>
         </div>
-        <div className="w-full pt-3 h-full bg-[#FBF9F899]">
-          <div className="flex justify-between items-center pr-10 p-5 text-2xl h-full"><div>Livraisons</div><div>+</div></div>
-          <div className="flex justify-between items-center pr-10 p-5 text-2xl h-full"><div>Questions</div><div>+</div></div>
+        <div className="w-full pt-3 p-4 h-full">
+          <div className="flex justify-between items-center pr-10 p-5 text-2xl h-full bg-[#FBF9F899]"><div>Livraisons</div><div>+</div></div>
+          <div className="flex justify-between items-center pr-10 p-5 text-2xl h-full bg-[#FBF9F899]"><div>Questions</div><div>+</div></div>
         </div>
       </div>
     </div>

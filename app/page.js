@@ -7,13 +7,6 @@ export default function Home() {
     <div className='w-screen overflow-x-hidden'>
       <Navbars />
       <MainTabs/>
-      
-      <div className='h-screen'></div>
-      
-      <div className='h-screen'></div>
-      
-      <div className='h-screen'></div>
-      <div className='h-screen'></div>
     </div>
   );
 }

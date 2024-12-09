@@ -38,7 +38,7 @@ const MainTabs = () => {
   };
 
   return (
-    <div className="container w-full font-sans">
+    <div className="container w-screen font-sans">
       <Tabs
         defaultActiveKey="1"
         activeKey={activeTab}

@@ -4,3 +4,17 @@
 body{
     overflow-x: hidden;
 }
+@font-face {
+  font-family: 'CabinetGrotesk-Thin';
+  src:url('../public/CabinetGrotesk_Complete/Fonts/TTF/CabinetGrotesk-Variable.ttf') format('truetype');
+  font-weight: 100;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'CabinetGrotesk-Regular';
+  src: url('../public/CabinetGrotesk_Complete/Fonts/TTF/CabinetGrotesk-Regular.ttf') format('truetype');
+  font-weight: 100;
+  font-display: swap;
+  font-style: normal;
+}

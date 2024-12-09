@@ -10,6 +10,8 @@ module.exports = {
        fontFamily: {
         playfair: ['Playfair Display', 'serif'],
         cabinet: ['Cabinet Grotesk', 'sans-serif'],
+        thin: ['CabinetGrotesk-Thin', 'sans-serif'],
+        Regular: ['CabinetGrotesk-Regular', 'sans-serif'],  
       },
       colors: {
         background: "var(--background)",

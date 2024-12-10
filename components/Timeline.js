@@ -40,7 +40,8 @@ function Timeline() {
           {/* Step 2 - System */}
           <div className='flex flex-col justify-center items-center align-middle'>
             <div className='w-[30px] h-[30px] md:w-[70px] md:h-[70px]'>
-              <System />
+              <Furniture/>
+              
             </div>
             <div className='font-Regular text-[10px] md:text-[22px]'>
               Livraison & Reprise
@@ -58,7 +59,7 @@ function Timeline() {
           {/* Step 3 - Van */}
           <div className='flex flex-col justify-center items-center align-middle'>
             <div className='w-[30px] h-[30px] md:w-[70px] md:h-[70px]'>
-              <Van />
+             <System />
             </div>
             <div className='font-Regular  text-[10px] md:text-[22px]'>
               Livraison & Reprise
@@ -76,7 +77,7 @@ function Timeline() {
           {/* Step 4 - Furniture */}
           <div className='flex flex-col justify-center items-center align-middle'>
             <div className='w-[30px] h-[30px] md:w-[70px] md:h-[70px]'>
-              <Furniture />
+              <Van/>
             </div>
             <div className='font-Regular text-[10px] md:text-[22px]'>
               Livraison & Reprise

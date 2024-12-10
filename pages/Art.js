@@ -19,7 +19,7 @@ function Art() {
         <div className='mt-20 h-full overflow-x-hidden'>
             <Timeline/>
         </div>
-        <div className='mt-20 md:mt-60 h-screen'>
+        <div className='mt-20 md:mt-60 h-[50vh]'>
             <BottomNav/>
         </div>
     </div>

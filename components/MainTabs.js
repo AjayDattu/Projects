@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useMemo } from 'react';
-import { Tabs } from 'antd';
+import { Tabs } from 'antd/es';
 import dynamic from 'next/dynamic';
 
 // Dynamically import the Art component

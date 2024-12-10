@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+/** @type {import('@/components/node_modules/next').NextConfig} */
 const nextConfig = {
   images: {
     domains: ['res.cloudinary.com'], // Add the Cloudinary domain here

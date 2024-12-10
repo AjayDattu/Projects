@@ -1,11 +1,11 @@
 'use client';
 import React from 'react';
 import Card from './Card';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/swiper-react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { A11y, Navigation, Pagination } from 'swiper/modules';
+import { A11y, Navigation, Pagination } from 'swiper/types/modules';
 
 function SliderCart() {
   return (

@@ -1,8 +1,8 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
-import { Dropdown, Menu } from 'antd';
-import { MenuOutlined } from '@ant-design/icons';
+import { Dropdown, Menu } from 'antd/es';
+import { MenuOutlined } from '@ant-design/icons/lib';
 
 // Dynamic imports
 const SearchBar = dynamic(() => import('./SearchBar'), { ssr: false });

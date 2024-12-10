@@ -40,7 +40,7 @@ function LandingPage() {
         </ol>
       </nav>
       <div className="w-screen flex flex-col md:flex-row">
-        <div className="flex flex-row w-full h-[652px] bg-[#F8F6F4]">
+        <div className="flex flex-row w-full h-[350px] md:h-[652px] bg-[#F8F6F4]">
           <div className="flex flex-start gap-10">
             <div>
               {product.images?.length > 0 ? (

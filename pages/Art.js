@@ -2,8 +2,8 @@
 import BottomNav from '@/components/BottomNav';
 import NormalGrid from '@/components/NormalGrid';
 import Timeline from '@/components/Timeline';
-import dynamic from '@/components/node_modules/next/dynamic'
-import React from '@/components/node_modules/@types/react'
+import dynamic from 'next/dynamic';
+import React from 'react';
 const LandingPage = dynamic(()=> import('../components/Landingpage'));
 const SliderCart = dynamic(()=> import('../components/SliderCart'));
 function Art() {

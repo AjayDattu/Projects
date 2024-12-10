@@ -1,5 +1,6 @@
 "use client";
-import dynamic from '@/components/node_modules/next/dynamic';
+
+import dynamic from 'next/dynamic';
 const Navbars = dynamic(() => import('@/components/Navbars'), { ssr: false });
 const MainTabs = dynamic(() => import('@/components/MainTabs'), { ssr: false });
 

@@ -4,8 +4,6 @@ import dynamic from 'next/dynamic';
 import { Dropdown, Menu } from 'antd/es';
 import { MenuOutlined } from '@ant-design/icons/lib';
 
-// Dynamic imports
-const SearchBar = dynamic(() => import('./SearchBar'), { ssr: false });
 
 // Optional dynamic imports for icons and logos (if they are not critical)
 const Bulb = dynamic(() => import('./Logo/Bulb'), { ssr: false });

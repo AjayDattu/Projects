@@ -13,7 +13,7 @@ function Art() {
         <div className='w-screen mt-20 overflow-x-hidden'>
           <SliderCart/>
         </div>
-        <div className='w-screen h-full mt-10'>
+        {/* <div className='w-screen h-full mt-10'>
           <NormalGrid/>
         </div>
         <div className='mt-20 h-full overflow-x-hidden'>
@@ -21,7 +21,7 @@ function Art() {
         </div>
         <div className='mt-20 md:mt-60 h-[50vh]'>
             <BottomNav/>
-        </div>
+        </div> */}
     </div>
 
   )

@@ -1,19 +1,24 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { Dropdown, Menu } from 'antd';
 import { MenuOutlined } from '@ant-design/icons';
 
+// Dynamic imports
 const SearchBar = dynamic(() => import('./SearchBar'), { ssr: false });
-const Bulb = dynamic(() => import('./Logo/Bulb'));
-const Cart = dynamic(() => import('./Logo/Cart'));
-const Profile = dynamic(() => import('./Logo/Profile'));
-const Logo = dynamic(() => import('./Logo/Logo'));
-const Love = dynamic(() => import('./Logo/Love'));
+const Logo = dynamic(() => import('./Logo/Logo')); // Keep critical components static
+
+// Optional dynamic imports for icons and logos (if they are not critical)
+const Bulb = dynamic(() => import('./Logo/Bulb'), { ssr: false });
+const Cart = dynamic(() => import('./Logo/Cart'), { ssr: false });
+const Profile = dynamic(() => import('./Logo/Profile'), { ssr: false });
+const Love = dynamic(() => import('./Logo/Love'), { ssr: false });
 
 function Navbars() {
   const [isDesktop, setIsDesktop] = useState(false);
-  React.useEffect(() => {
+
+  // Media query to detect window size
+  useEffect(() => {
     const updateMedia = () => {
       setIsDesktop(window.innerWidth >= 1024);
     };
@@ -43,11 +48,18 @@ function Navbars() {
           <Profile />
         </div>
       ) : (
-        <Dropdown menu={{ items: dropdownItems , style:{display:"flex",gap:5,flexDirection:"column"}}} trigger={['click']}>
-          <MenuOutlined className="text-xl cursor-pointer" />
+        <Dropdown
+          menu={{
+            items: dropdownItems,
+            style: { display: 'flex', gap: 5, flexDirection: 'column' },
+          }}
+          trigger={['click']}
+        >
+          <MenuOutlined className="text-xl cursor-pointer" aria-label="Menu" />
         </Dropdown>
       )}
     </nav>
   );
 }
+
 export default Navbars;

@@ -18,3 +18,28 @@ body{
   font-display: swap;
   font-style: normal;
 }
+/* Hide the default navigation symbols */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+   display: none;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #5CD2DD !important;
+  color: white; 
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: #5CD2CC !important;
+}
+#prev{
+  color: white;
+  width: 40px;
+  height:30px;
+}
+#next{
+  color: white;
+   width: 40px;
+  height:30px;
+}

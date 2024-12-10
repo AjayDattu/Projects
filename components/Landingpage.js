@@ -28,7 +28,7 @@ function LandingPage() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-7 w-screen">
+    <div className="flex flex-col gap-2 w-screen">
       <nav aria-label="Breadcrumb" className="mb-4">
         <ol className="flex gap-1">
           <li>
@@ -123,7 +123,7 @@ function LandingPage() {
 
         </div>
       </div>
-      <div className="w-screen flex flex-col md:flex-row gap-4 pr-4 h-30">
+      <div className="w-screen flex flex-col md:flex-row gap-4 pr-4 h-30 mt-6">
         <div className=" flex flex-col w-full gap-2 h-full">
           <div className="text-[20px] font-Regular text-[#111928] font-light">Description produit</div>
           <div className="text-[14px] h-full text-[#9C9C9C]">

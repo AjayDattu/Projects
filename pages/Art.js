@@ -1,21 +1,27 @@
 
+import NormalGrid from '@/components/NormalGrid';
 import dynamic from 'next/dynamic'
 import React from 'react'
 const LandingPage = dynamic(()=> import('../components/Landingpage'));
 const SliderCart = dynamic(()=> import('../components/SliderCart'));
 function Art() {
   return (
-    <div className='h-screen px-4 w-screen'>
+    <div className='px-4 w-screen'>
         <LandingPage/>
-        <div className='h-screen'>
+        <div className=' mt-20'>
           <SliderCart/>
         </div>
-        <div className='h-screen'>
+        <div className='h-full mt-10'>
+          <NormalGrid/>
         </div>
-        <div className='h-screen'></div>
-        
-        <div className='h-screen'></div>
+        <div className=''>
+
+        </div>
+        <div className=''>
+
+        </div>
     </div>
+
   )
 }
 

@@ -39,47 +39,40 @@ function LandingPage() {
           </li>
         </ol>
       </nav>
-      <div className="w-screen flex flex-col md:flex-row">
-        <div className="flex flex-row w-full h-[350px] md:h-[652px] bg-[#F8F6F4]">
-          <div className="flex flex-start gap-10">
-            <div>
-              {product.images?.length > 0 ? (
-                product.images.map((item) => (
-                  <div
-                    key={item._id}
-                    className={classNames(
-                      "w-[55px] h-[55px] cursor-pointer opacity-80 hover:opacity-100 duration-300 p-1",
-                      {
-                        " rounded-sm opacity-100":
-                          imgUrl === item.url,
-                      }
-                    )}
-                    onClick={() => handleThumbnailClick(item.url)}
-                  >
-                    <Image
-                      src={item.url}
-                      alt={`Product thumbnail ${item._id}`}
-                      width={55}
-                      height={55}
-                      loading="lazy"
-                      className="object-cover bg-white rounded-sm "
-                    />
-                  </div>
-                ))
-              ) : (
-                <p>No images available</p>
-              )}
-            </div>
-            <div className="w-full h-full flex flex-col">
-              <Image
-                src={imgUrl}
-                alt="Selected Product"
-                width={552}
-                height={552}
-                loading="lazy"
-                className="object-contain"
-              />
-            </div>
+<div className="flex flex-col md:flex-row gap-6 ">
+        <div className="flex gap-6 w-full bg-[#F8F6F4]">
+          <div className="flex flex-col gap-4 ">
+            {product.images.map((item) => (
+              <div
+                key={item._id}
+                className={classNames(
+                  "cursor-pointer border p-1 rounded-md duration-300 hover:shadow-lg bg-white"
+                )}
+                onClick={() => handleThumbnailClick(item.url)}
+              >
+                <Image
+                  src={item.url}
+                  alt={`Thumbnail ${item._id}`}
+                  width={55}
+                  height={55}
+                  className="rounded-md object-cover"
+                  loading="lazy"
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Main Image */}
+          <div className="flex-1">
+            <Image
+              src={imgUrl}
+              alt="Selected product image"
+              width={600}
+              height={600}
+              layout="responsive"
+              className="rounded-md object-contain"
+              loading="lazy"
+            />
           </div>
         </div>
         <div className="flex flex-col w-full pr-10 p-3 gap-3">

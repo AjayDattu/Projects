@@ -58,13 +58,71 @@ function Navbars() {
 <path d="M53.7948 64.6564H52.1676V64.9999H53.7948V64.6564Z" fill="#5CD2DD"/>
 </svg>
       </div>
-      <SearchBar />
+       <div className="w-full md:w-full px-4">
+      <form
+        action="/search"
+        method="GET"
+        className="flex items-center rounded-sm shadow-sm bg-[#F9FAFB] w-3/4 h-10 px-1 md:px-4"
+      >
+        <input
+          type="text"
+          name="q"
+          placeholder="Rechercher un produit"
+          aria-label="Search box"
+          className="flex-grow bg-transparent outline-none text-gray-800 text-[10px] md:text-base "
+        />
+        <button
+          type="submit"
+          aria-label="Search"
+          className="text-gray-500 hover:text-gray-800 focus:outline-none"
+        >
+           <div className='w-2 h-2 md:w-5 md:h-5 text-gray-100'>
+                <svg width="auto" height="auto" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19 19L15.5001 15.5M18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 4.80558 4.80558 1 9.5 1C14.1944 1 18 4.80558 18 9.5Z" stroke="#003349" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    </div>
+        </button>
+      </form>
+    </div>
       {isDesktop ? (
         <div className="flex gap-3 items-center">
-          <Bulb />
-          <Love />
-          <Cart />
-          <Profile />
+         <div className='flex flex-row align-middle items-center text-center gap-2 w-28'>
+       <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.25 11.375V13.25C9.25 13.9489 9.25 14.2984 9.13582 14.574C8.98358 14.9416 8.69157 15.2336 8.32403 15.3858C8.04837 15.5 7.69891 15.5 7 15.5C6.30109 15.5 5.95163 15.5 5.67597 15.3858C5.30843 15.2336 5.01642 14.9416 4.86418 14.574C4.75 14.2984 4.75 13.9489 4.75 13.25V11.375M9.25 11.375C11.2366 10.507 12.625 8.43161 12.625 6.125C12.625 3.0184 10.1066 0.5 7 0.5C3.8934 0.5 1.375 3.0184 1.375 6.125C1.375 8.43161 2.76336 10.507 4.75 11.375M9.25 11.375H4.75" stroke="#282F35" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+
+
+        Inspirations
+    </div>
+      <div className='flex flex-row gap-2 items-center align-middle w-40'>
+                <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" clipRule="evenodd" d="M8.99428 2.27985C7.32816 0.332 4.54978 -0.191965 2.46224 1.59168C0.374693 3.37532 0.0807963 6.35748 1.72015 8.467C3.08317 10.2209 7.20813 13.9201 8.56007 15.1174C8.71133 15.2513 8.78695 15.3183 8.87517 15.3446C8.95216 15.3676 9.03641 15.3676 9.1134 15.3446C9.20161 15.3183 9.27724 15.2513 9.42849 15.1174C10.7804 13.9201 14.9054 10.2209 16.2684 8.467C17.9078 6.35748 17.6498 3.35656 15.5263 1.59168C13.4029 -0.173202 10.6604 0.332 8.99428 2.27985Z" stroke="#8F9BA0" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                   Mes favoris
+          <div className='rounded-lg bg-[#CAD2D566] h-6 w-10 text-center text-[15px]'>24</div>
+    </div>
+         <button className='bg-[#0093D0] flex flex-row p-3 rounded-md text-white gap-1 align-middle items-center'>
+        <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.66666 1.66663H2.75513C2.96014 1.66663 3.06265 1.66663 3.14514 1.70433C3.21784 1.73755 3.27944 1.79098 3.32261 1.85825C3.3716 1.93458 3.3861 2.03606 3.41509 2.23901L3.80951 4.99996M3.80951 4.99996L4.68609 11.4428C4.79733 12.2604 4.85295 12.6692 5.04841 12.9769C5.22064 13.2481 5.46756 13.4637 5.75945 13.5978C6.09071 13.75 6.50328 13.75 7.32841 13.75H14.46C15.2454 13.75 15.6382 13.75 15.9591 13.6086C16.2421 13.484 16.4849 13.2832 16.6602 13.0285C16.8591 12.7396 16.9326 12.3538 17.0796 11.5823L18.1826 5.79137C18.2343 5.5198 18.2602 5.38401 18.2227 5.27788C18.1898 5.18477 18.1249 5.10636 18.0396 5.05664C17.9424 4.99996 17.8041 4.99996 17.5277 4.99996H3.80951ZM8.33332 17.5C8.33332 17.9602 7.96023 18.3333 7.49999 18.3333C7.03975 18.3333 6.66666 17.9602 6.66666 17.5C6.66666 17.0397 7.03975 16.6666 7.49999 16.6666C7.96023 16.6666 8.33332 17.0397 8.33332 17.5ZM15 17.5C15 17.9602 14.6269 18.3333 14.1667 18.3333C13.7064 18.3333 13.3333 17.9602 13.3333 17.5C13.3333 17.0397 13.7064 16.6666 14.1667 16.6666C14.6269 16.6666 15 17.0397 15 17.5Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+        Painer
+    </button>
+          <div className="flex flex-row gap-3 items-center align-middle">
+      <div className="bg-[#CAD2D566] rounded-full w-10 h-10"></div>
+      <div className="flex items-center gap-1">
+        FR
+        {/* Dropdown Icon */}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-4 w-4 text-gray-600"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+        </svg>
+      </div>
+    </div>
         </div>
       ) : (
         <Dropdown

@@ -43,13 +43,14 @@ function Card() {
             alt="Product Image"
             layout="fill"
             objectFit="contain"
+            loading='lazy'
             className="rounded-lg transition-transform duration-300 ease-in-out group-hover:scale-105"
           />
         </div>
 
         {/* Quantity Control */}
         <div className="flex flex-col sm:flex-row h-auto sm:h-[50px] gap-2 bg-white rounded-lg p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <div className="flex items-center justify-center text-xs sm:text-sm bg-gray-200 text-gray-700 p-1 rounded-md w-full sm:w-[60px]">
+          <div className="flex items-center justify-center text-xs sm:text-sm  text-gray-700 p-1 rounded-md w-full sm:w-[60px]">
             QTE
           </div>
           <div className="flex items-center justify-center text-xs sm:text-sm border border-gray-200 rounded-md flex-1">

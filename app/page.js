@@ -6,8 +6,7 @@ const MainTabs = dynamic(() => import('@/components/MainTabs'), { ssr: false });
 export default function Home() {
   return (
     <div className="h-full w-screen">
-
-        <Navbars />
+       <Navbars />
        <MainTabs/>
     </div>
   );

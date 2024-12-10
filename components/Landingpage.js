@@ -28,7 +28,7 @@ function LandingPage() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-2 w-screen">
+    <div className="flex flex-col gap-2 w-screen px-4 overflow-x-hidden">
       <nav aria-label="Breadcrumb" className="mb-4">
         <ol className="flex gap-1">
           <li>

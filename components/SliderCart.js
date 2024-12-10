@@ -9,7 +9,7 @@ import { A11y, Navigation, Pagination } from 'swiper/modules';
 
 function SliderCart() {
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col gap-5 px-4 overflow-x-hidden">
       <div className="font-Regular text-[35px] flex flex-col md:flex-row justify-start md:justify-between text-center">
         <div>Articles similaires</div>
         <div className="text-[#393939] text-[16px] cursor-pointer hover:underline">
@@ -46,27 +46,32 @@ function SliderCart() {
             nextEl: '#next',
             prevEl: '#prev',
           }}
-          breakpoints={{
-            // Responsive breakpoints for different screen sizes
-            320: {
-              slidesPerView: 1,
-              spaceBetween: 10,
-            },
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 15,
-            },
-            768: {
-              slidesPerView: 3,
-              spaceBetween: 20,
-            },
-            1024: {
-              slidesPerView: 4,
-              spaceBetween: 20,
-            },
-          }}
-          className="w-full"
-        >
+  breakpoints={{
+     0: {
+      slidesPerView: 1, // Show 1 slide for screens smaller than 320px
+      spaceBetween: 10,
+    },
+    320: {
+      slidesPerView: 1, // Show 1 slide on mobile
+      spaceBetween: 10,
+    },
+    640: {
+      slidesPerView: 1, // Show 1 slide on small tablets
+      spaceBetween: 15,
+    },
+    768: {
+      slidesPerView: 1, // Show 1 slide on medium tablets
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 4, // Show 4 slides on larger screens (desktops)
+      spaceBetween: 20,
+    },
+  }}
+  className="w-full"
+>
+
+
           <SwiperSlide>
             <Card />
           </SwiperSlide>

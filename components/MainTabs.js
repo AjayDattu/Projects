@@ -45,7 +45,7 @@ const MainTabs = () => {
         onChange={handleTabChange}
         centered
         size="large"
-        className="w-full"
+        className="w-full sticky"
         tabBarStyle={{
           borderBottom: '2px solid #e8e8e8',
         }}

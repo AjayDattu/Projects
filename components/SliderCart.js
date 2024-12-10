@@ -1,12 +1,13 @@
 'use client';
 import React from 'react';
-import Card from './Card';
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { A11y, Navigation, Pagination } from 'swiper/modules';
-
+import dynamic from 'next/dynamic';
+const Card = dynamic(()=> import('./Card'));
 function SliderCart() {
   return (
     <div className="flex flex-col gap-5 px-4 overflow-x-hidden">
